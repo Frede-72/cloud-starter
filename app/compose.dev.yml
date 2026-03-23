@@ -1,0 +1,13 @@
+services:
+  mysql:
+    image: mysql:8.4
+    restart: unless-stopped
+    # Use .env.sample for development environment variables
+    # Load using:
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+    ports:
+      - '127.0.0.1:${MYSQL_PORT}:3306'
