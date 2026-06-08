@@ -25,12 +25,3 @@ jobs:
       contents: read
       packages: write
     uses: ./.github/workflows/push-ghcr-frontend.yml
-
-  deploy:
-    needs: [push-backend, push-frontend]
-    runs-on: ubuntu-latest
-    runs: |
-      echo "Deploying to production..."
-      # Add your deployment commands here
-      echo "Deployment complete!"
-

@@ -1,0 +1,7 @@
+live.cfg.dk {
+    encode gzip zstd
+
+    handle {
+        reverse_proxy frontend:80
+    }
+}
